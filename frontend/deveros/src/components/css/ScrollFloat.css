@@ -1,0 +1,18 @@
+.scroll-float-container {
+    margin: 0rem 0;
+    overflow: hidden;
+}
+
+.scroll-float-text {
+    display: inline-block;
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive text size */
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #ffffff; /* FORCE WHITE COLOR */
+}
+
+.scroll-float-char {
+    display: inline-block;
+    transform-origin: 50% 0%;
+}

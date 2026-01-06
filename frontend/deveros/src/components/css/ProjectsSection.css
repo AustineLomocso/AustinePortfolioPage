@@ -1,0 +1,17 @@
+/* src/components/css/Projects.css */
+.projects-section {
+    width: 100%;
+    /* Optional: Add min-height if you want space below the text */
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: flex-start; /* Starts from top (can be 'center' if you want it vertically centered) */
+    padding-top: 4rem; /* Spacing from the Hero section */
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center; /* Ensures the text itself is centered */
+}

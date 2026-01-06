@@ -1,0 +1,165 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 50vh;
+
+
+}
+
+.hero-content {
+    width : 500px;
+    text-align: left;
+    z-index: 10;
+}
+
+.hero-visual {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0.9;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: normal;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-top: 2rem;
+    line-height: 1.4;
+    width: 450px;
+    display: block !important;
+    min-height: 5rem;
+}
+/* 1. Add this Keyframe Animation at the bottom of the file */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(150px); /* Starts 150px to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);     /* Ends in original position */
+    }
+}
+
+.circle-placeholder {
+    width: 400px;
+    height: 400px;
+    background-color: #450a0a;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+
+    background-image: url('../../assets/pic.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+
+    opacity: 0;
+    animation: slideInRight 1.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;       /* Space between the two buttons */
+    margin-top: 2rem; /* Space between subtitle and buttons */
+}
+
+.btn-ref {
+    color: white !important; /* Forces white text if links are being stubborn */
+    text-decoration: none;   /* Removes the underline */
+}
+
+.btn-ref:hover{
+    color:#fbbf24;
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 0 2rem;
+    }
+
+    .hero-container {
+        gap: 4rem;              /* reduce excessive desktop gap */
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 420px;           /* scale text block */
+    }
+
+    .hero-title {
+        font-size: 4.5rem;      /* scale headline */
+        line-height: 1;
+    }
+
+    .hero-subtitle {
+        width: 380px;
+        font-size: 0.95rem;
+    }
+
+    .circle-placeholder {
+        width: 320px;
+        height: 320px;
+    }
+    .hero-buttons {
+        justify-content: center; /* Centers buttons on mobile/tablet */
+        width: 100%;             /* Ensures they can span the full width if needed */
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .hero-content {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        white-space: normal;
+    }
+
+    .circle-placeholder {
+        width: 280px;
+        height: 280px;
+    }
+}

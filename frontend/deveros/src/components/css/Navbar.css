@@ -1,0 +1,364 @@
+/* ... variables ... */
+:root {
+    --nav-bg: #350505;
+    --nav-accent: #521111;
+    --btn-bg: #530e0e;
+    --btn-hover: #6b1414;
+    --text-white: #ffffff;
+    --text-hover: #ef4444;
+}
+
+/* --- 1. Base Layout (Desktop) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    font-family: sans-serif;
+}
+
+.nav-container {
+    position: relative;
+    max-width: 1400px;  /* Increased slightly so it doesn't feel cramped */
+    margin: 0 auto;     /* Centers the container on huge screens */
+    width: 100%;
+    height: 100%;
+
+    /* CHANGED: Increased padding to push Logo/Button away from edges */
+    padding: 0 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* Logo */
+.nav-logo { flex-shrink: 0; }
+.logo-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--nav-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Links (Absolute Center) */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 3rem;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover { color: var(--text-hover); }
+
+/* Buttons */
+.nav-actions { display: block; }
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--text-white);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-1px);
+    color : var(--text-hover);
+}
+
+.mobile-only-btn { display: none; }
+.nav-toggle { display: none; }
+
+
+/* --- 2. Tablet / Laptop (1024px and below) --- */
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        /* CHANGED: Slightly less padding for laptops, but still generous */
+        padding: 0 3rem;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+}
+
+/* --- 3. Mobile (768px and below) --- */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        /* CHANGED: Standard mobile padding */
+        padding: 0 1.5rem;
+    }
+
+    .nav-actions { display: none; }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #d1d5db;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Mobile Drawer */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        transform: none; /* Disable centering for mobile */
+        width: 100%;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        height: auto;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .mobile-only-btn {
+        display: block;
+        width: 100%;
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+
+    .mobile-only-btn .btn-download {
+        width: 80%;
+    }
+}/* ... variables ... */
+:root {
+    --nav-bg: #350505;
+    --nav-accent: #521111;
+    --btn-bg: #530e0e;
+    --btn-hover: #6b1414;
+    --text-white: #ffffff;
+    --text-hover: #ef4444;
+}
+
+/* --- 1. Base Layout (Desktop) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    font-family: sans-serif;
+}
+
+.nav-container {
+    position: relative;
+    max-width: 1400px;  /* Increased slightly so it doesn't feel cramped */
+    margin: 0 auto;     /* Centers the container on huge screens */
+    width: 100%;
+    height: 100%;
+
+    /* CHANGED: Increased padding to push Logo/Button away from edges */
+    padding: 0 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* Logo */
+.nav-logo { flex-shrink: 0; }
+.logo-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--nav-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Links (Absolute Center) */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 3rem;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover { color: var(--text-hover); }
+
+/* Buttons */
+.nav-actions { display: block; }
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--text-white);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-1px);
+}
+
+.mobile-only-btn { display: none; }
+.nav-toggle { display: none; }
+
+
+/* --- 2. Tablet / Laptop (1024px and below) --- */
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        /* CHANGED: Slightly less padding for laptops, but still generous */
+        padding: 0 3rem;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+}
+
+/* --- 3. Mobile (768px and below) --- */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        /* CHANGED: Standard mobile padding */
+        padding: 0 1.5rem;
+    }
+
+    .nav-actions { display: none; }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #d1d5db;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Mobile Drawer */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        transform: none; /* Disable centering for mobile */
+        width: 100%;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        height: auto;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .mobile-only-btn {
+        display: block;
+        width: 100%;
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+
+    .mobile-only-btn .btn-download {
+        width: 80%;
+    }
+}
