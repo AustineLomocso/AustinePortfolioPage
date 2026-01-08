@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import '../css/ChromaGrid.css';
+import trashdash from  '../../assets/trashdash.png';
+import bluehire from '../../assets/bluehire pic.png';
+import cookingina from '../../assets/cookinigna.png'
 
 export interface ChromaItem {
     image: string;
     title: string;
     subtitle: string;
-    handle?: string;
     location?: string;
     borderColor?: string;
     gradient?: string;
@@ -44,58 +46,28 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
 
     const demo: ChromaItem[] = [
         {
-            image: 'https://i.pravatar.cc/300?img=8',
-            title: 'Alex Rivera',
-            subtitle: 'Full Stack Developer',
-            handle: '@alexrivera',
+            image: trashdash,
+            title: 'TrashDash',
+            subtitle: '2D Local Multiplayer Platformer',
             borderColor: '#4F46E5',
             gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-            url: 'https://github.com/'
+            url: 'https://github.com/Pinghtdog/TrashDash'
         },
         {
-            image: 'https://i.pravatar.cc/300?img=11',
-            title: 'Jordan Chen',
-            subtitle: 'DevOps Engineer',
-            handle: '@jordanchen',
+            image: bluehire,
+            title: 'BlueHire',
+            subtitle: 'Platform for Blue Collar Freelance',
             borderColor: '#10B981',
             gradient: 'linear-gradient(210deg, #10B981, #000)',
-            url: 'https://linkedin.com/in/'
+            url: 'https://github.com/ero-s/BlueHire'
         },
         {
-            image: 'https://i.pravatar.cc/300?img=3',
-            title: 'Morgan Blake',
-            subtitle: 'UI/UX Designer',
-            handle: '@morganblake',
+            image: cookingina,
+            title: 'Cooking Ina',
+            subtitle: '2D Java Cooking Game',
             borderColor: '#F59E0B',
             gradient: 'linear-gradient(165deg, #F59E0B, #000)',
-            url: 'https://dribbble.com/'
-        },
-        {
-            image: 'https://i.pravatar.cc/300?img=16',
-            title: 'Casey Park',
-            subtitle: 'Data Scientist',
-            handle: '@caseypark',
-            borderColor: '#EF4444',
-            gradient: 'linear-gradient(195deg, #EF4444, #000)',
-            url: 'https://kaggle.com/'
-        },
-        {
-            image: 'https://i.pravatar.cc/300?img=25',
-            title: 'Sam Kim',
-            subtitle: 'Mobile Developer',
-            handle: '@thesamkim',
-            borderColor: '#8B5CF6',
-            gradient: 'linear-gradient(225deg, #8B5CF6, #000)',
-            url: 'https://github.com/'
-        },
-        {
-            image: 'https://i.pravatar.cc/300?img=60',
-            title: 'Tyler Rodriguez',
-            subtitle: 'Cloud Architect',
-            handle: '@tylerrod',
-            borderColor: '#06B6D4',
-            gradient: 'linear-gradient(135deg, #06B6D4, #000)',
-            url: 'https://aws.amazon.com/'
+            url: 'https://github.com/ero-s/Cooking-Ina-Ang-Sarap-'
         }
     ];
     const data = items?.length ? items : demo;
@@ -187,7 +159,6 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
                     </div>
                     <footer className="chroma-info">
                         <h3 className="name">{c.title}</h3>
-                        {c.handle && <span className="handle">{c.handle}</span>}
                         <p className="role">{c.subtitle}</p>
                         {c.location && <span className="location">{c.location}</span>}
                     </footer>

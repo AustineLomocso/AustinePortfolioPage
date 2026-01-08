@@ -1,0 +1,186 @@
+/* src/components/css/Skills.css */
+
+.skills-section {
+    width: 100%;
+    /* Min-height ensures it takes space, padding handles spacing from other sections */
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Ensures it sits above any background particles */
+}
+
+/* --- Section Title --- */
+.skills-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -0.05em;
+}
+
+/* --- Filter Chips Container --- */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* --- The Filter Chip Button --- */
+.filter-chip {
+    padding: 10px 24px;
+    border-radius: 50px; /* Pill shape */
+    background: rgba(255, 255, 255, 0.05); /* See-through glass */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a3a3a3;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-chip:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+/* Active State (Selected) */
+.filter-chip.active {
+    background: #ffffff;
+    color: #450a0a; /* Dark red text matches your theme */
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Grid Layout for Cards --- */
+.skills-grid {
+    display: grid;
+    /* Responsive Grid: Fits as many cards as possible, minimum 250px wide */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-height: 180px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.skill-category-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fbbf24; /* Gold accent color */
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.skill-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.skill-desc {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media screen and (max-width: 1024px) {
+    .skills-section {
+        padding: 3rem 1.5rem;
+        min-height: auto;
+    }
+
+    .skills-title {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .filter-container {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .filter-chip {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.25rem;
+        min-height: 140px;
+    }
+
+    .skill-name {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .skill-category-label {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-title {
+        font-size: 2rem;
+    }
+}

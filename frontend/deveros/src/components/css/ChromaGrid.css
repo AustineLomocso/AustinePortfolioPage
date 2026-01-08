@@ -3,15 +3,13 @@
     width: 100%;
     height: 100%;
     display: grid;
-    /* CHANGED: Use 1fr to let columns expand to fill the width */
-    grid-template-columns: repeat(var(--cols, 3), 1fr);
+    grid-template-columns: repeat(var(--cols, 3), minmax(0,300px));
     grid-auto-rows: auto;
     justify-content: center;
-    gap: 1.5rem; /* Increased gap slightly for the wider layout */
+    gap: 1rem;
 
-    /* CHANGED: Matches the Hero/Navbar width logic */
     max-width: 100%;
-    padding: 0 5rem; /* Matches the padding you likely have on Navbar */
+    padding: 0 5rem;
     margin: 0 auto;
     box-sizing: border-box;
 
@@ -43,7 +41,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%; /* CHANGED: Fills the grid column */
+    width: 100%;
     height: auto;
     border-radius: 20px;
     overflow: hidden;
@@ -85,38 +83,38 @@
     position: relative;
     z-index: 1;
     flex: 1;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
     background: transparent;
     transition: background 0.3s ease;
-    height: 200px; /* Enforce a consistent image height */
-}
-
-.chroma-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
+    height: 140px;
 }
 
 .chroma-info {
     position: relative;
     z-index: 1;
-    padding: 1.5rem;
+    padding: 1rem;
+
     color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .chroma-info .name {
     margin: 0;
-    font-size: 1.75rem; /* Increased from default (likely 1.17rem) */
-    font-weight: 800;   /* Extra bold */
+    font-size: 1.25rem;
+    font-weight: 800;
     line-height: 1.1;
     color: #ffffff;
-    font-family: 'Inter', sans-serif; /* Matches your hero section font */
+    font-family: 'Inter', sans-serif;
+}
+
+.chroma-info .role {
+    font-size: 0.85rem;
+    color: #cccccc;
+    font-weight: 500;
+    margin: 0;
 }
 
 .chroma-info .role {

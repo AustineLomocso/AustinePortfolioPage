@@ -49,13 +49,24 @@ const Navbar = () => {
 
                     {/* Mobile-only Download Button (inside menu) */}
                     <div className="mobile-only-btn">
-                        <a href="/cv.pdf" className="btn-download">DOWNLOAD CV</a>
+                        <a
+                            href="/AustineLomocso_Resume.pdf"  // CHANGED: Must match the file in 'public' exactly
+                            className="btn-download"
+                            download="Austine_Resume.pdf"       // Optional: This is the name the user sees when saving
+                        >
+                            DOWNLOAD RESUME
+                        </a>
                     </div>
                 </div>
 
-                {/* Desktop Download Button (Right) */}
                 <div className="nav-actions">
-                    <a href="/cv.pdf" className="btn-download">DOWNLOAD CV</a>
+                    <a
+                        href="/AustineLomocso_Resume.pdf"  // CHANGED: Must match the file in 'public' exactly
+                        className="btn-download"
+                        download="Austine_Resume.pdf"       // Optional: This is the name the user sees when saving
+                    >
+                        DOWNLOAD RESUME
+                    </a>
                 </div>
 
                 {/* Mobile Hamburger Toggle */}

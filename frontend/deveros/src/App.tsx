@@ -3,6 +3,8 @@ import Navbar from './components/reactbits/Navbar.tsx'
 import Hero from "./components/HeroSection.tsx";
 import './App.css';
 import Projects from "./components/ProjectsSection.tsx";
+import Skills from "./components/Skills.tsx";
+import Contact from "./components/ContactSection.tsx";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
         />
         <Hero/>
         <Projects/>
-
+        <Skills/>
+        <Contact/>
     </>
   )
 }
