@@ -16,12 +16,17 @@ const skillsData: Skill[] = [
     { id: 1, name: "React", category: "Tech Stack" },
     { id: 2, name: "System Design", category: "Technical" },
     { id: 3, name: "Data Structures", category: "Technical" },
-    { id: 4, name: "Problem Solving", category: "Soft Skills" },
-    { id: 5, name: "Communication", category: "Soft Skills" },
-    { id: 6, name: "TypeScript", category: "Tech Stack" },
-    { id: 7, name: "SQL & NoSQL", category: "Tech Stack" },
-    { id: 8, name: "Java / Spring Boot", category: "Tech Stack" },
-    { id: 9, name: "Team Leadership", category: "Soft Skills"},
+    { id: 4, name: "Object Oriented Programming", category: "Technical" },
+    { id: 5, name: "Information Management", category: "Technical" },
+    { id: 6, name: "Problem Solving", category: "Soft Skills" },
+    { id: 7, name: "Communication", category: "Soft Skills" },
+    { id: 8, name: "TypeScript", category: "Tech Stack" },
+    { id: 9, name: "SQL & NoSQL", category: "Tech Stack" },
+    { id: 10, name: "Java / Spring Boot", category: "Tech Stack" },
+    { id: 11, name: "Team Leadership", category: "Soft Skills"},
+    { id: 12, name: "Data Analysis", category: "Technical" },
+    { id: 13, name: "Machine Learning", category: "Technical" },
+    { id: 14, name: "Python", category: "Tech Stack" },
 ];
 
 const Skills = () => {
