@@ -31,7 +31,7 @@ const Contact = () => {
         const API_BASE_URL = "https://austineportfoliopage.onrender.com";
 
         try {
-            const response = await fetch(`${API_BASE_URL}/api/email/send, {
+            const response = await fetch(`${API_BASE_URL}/api/email/send`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // Fixed the typo here too
