@@ -28,10 +28,10 @@ const Contact = () => {
         setStatus({ message: '', type: null });
 
         // Ensure this matches your actual backend port (usually 8080)
-        const API_URL = "http://localhost:8080/api/email/send";
+        const API_BASE_URL = "https://austineportfoliopage.onrender.com";
 
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API_BASE_URL}/api/email/send, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // Fixed the typo here too
