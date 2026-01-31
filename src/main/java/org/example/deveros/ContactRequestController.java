@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/email")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://austineportfoliopage.onrender.com")
 public class ContactRequestController {
     @Autowired
     private ContactRequestService emailService;
