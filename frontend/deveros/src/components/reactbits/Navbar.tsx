@@ -9,7 +9,7 @@ const Navbar = () => {
         { name: 'HOME', href: '#home' },
         { name: 'PROJECTS', href: '#projects' },
         { name: 'SKILLS', href: '#skills' },
-        { name: 'CONTACT', href: '#contact' },
+        // { name: 'CONTACT', href: '#contact' },
     ];
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {

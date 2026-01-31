@@ -32,13 +32,6 @@ const Hero = () => {
                         >
                             VIEW PROJECTS
                         </a>
-
-                        <a
-                            href="#contact"
-                            className="btn-download"
-                        >
-                            CONTACT ME
-                        </a>
                     </div>
 
                 </div>
