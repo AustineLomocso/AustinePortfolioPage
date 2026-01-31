@@ -59,7 +59,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
             subtitle: 'Platform for Blue Collar Freelance',
             borderColor: '#10B981',
             gradient: 'linear-gradient(210deg, #10B981, #000)',
-            url: 'https://github.com/ero-s/BlueHire'
+            url: 'https://github.com/AustineLomocso/BlueHire'
         },
         {
             image: cookingina,
@@ -67,7 +67,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
             subtitle: '2D Java Cooking Game',
             borderColor: '#F59E0B',
             gradient: 'linear-gradient(165deg, #F59E0B, #000)',
-            url: 'https://github.com/ero-s/Cooking-Ina-Ang-Sarap-'
+            url: 'https://github.com/AustineLomocso/Cooking-Ina-Ang-Sarap-'
         }
     ];
     const data = items?.length ? items : demo;
