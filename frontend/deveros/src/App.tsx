@@ -5,7 +5,7 @@ import './App.css';
 import Projects from "./components/ProjectsSection.tsx";
 import Skills from "./components/Skills.tsx";
 import Contact from "./components/ContactSection.tsx";
-
+//random comment
 function App() {
   return (
     <>
